@@ -1,0 +1,28 @@
+<p>Alle Daten können vor dem Speichern bzw. Löschen überprüft werden.<br>
+Jede Änderung kann Folgebuchungen triggern.</p>
+
+<p>Dazu wird im Ordner <dfn>dbase/validate</dfn> für jede Tabelle mit besonderen
+Validierungsregeln eine Ini-Datei angelegt, z.B. <dfn>dbase/validate/tblxyz.php</dfn>.</p>
+
+<?php
+HTM::code("./sample.php", "Sample Validator");
+?>
+
+<dl>
+    <dt>chkVal($inf, $fld, $val)</dt>
+    <dd>$inf = alle Feldeigenschaften von $fld<br>
+        $fld = Feldname<br>
+        $val = beabsichtigter Wert
+    </dd>
+
+    <dt>b4Xxx($vls, $qid)</dt>
+    <dd>$vls = alle Felder des geänderten/neuen Datensatzes<br>
+        $qid = ID des zu ändernden Datensatzes (wo sinnvoll)
+    </dd>
+
+    <dt>onXxx($vls, $qid)</dt>
+    <dd>$vls = alle Felder des geänderten/neuen Datensatzes<br>
+        $qid = ID des zu ändernden/neuen Datensatzes
+    </dd>
+    </dd>
+</dl>

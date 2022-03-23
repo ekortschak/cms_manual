@@ -1,0 +1,29 @@
+
+
+<p>Die Konfigurationsdateien befinden sich in <dfn>config/</dfn>.</p>
+
+<dl>
+<dt>basics.php</dt><dd>setzt grundlegende Konstante und Pfadeinstellungen<br></dd><dt>config.ini</dt>
+<dd>enthält jene Parameter, die als Konstante für alle Skripte zur Verfügung stehen sollen.</dd>
+
+<dt>backup.ini</dt><dd>beinhaltet die verschiedenen Medien für die Datensicherung und -wiederherstellung<br></dd><dt>dbase.ini</dt><dd>regelt den Zugriff auf die hinterlegte Datenbank.<br></dd><dt>ftp.ini</dt><dd>regelt den Zugriff auf den Web-Server via FTP zum Zwecke der Veröffentlichung der bearbeiteten Seite.<br></dd><dt>mail.ini</dt><dd>regelt den E-Mail-Verkehr.<br></dd><dt>users.ini</dt>
+<dd>definiert die User, die rein auf Datei-Ebene agieren dürfen.<br>
+    Datenbank-Benutzer werden in der jeweiligen Datenbank festgelegt.
+</dd><dt>mods.ini</dt><dd>regelt die anzuzeigenden Module.</dd><dt>snips.ini</dt><dd>beinhaltet individuelle Code-Definitionen, die über den internen Editor in den Text eingefügt werden können.</dd><dt>tabsets.ini</dt><dd>regelt die Anzeige von Register-Karten (Tabs) in Abhängigkeit von der aufgerufenen Datei.</dd>
+</dl>
+
+<h4>Weitere Abhängigkeiten</h4>
+<p>Während des Startes werden auch folgende Dateien aufgerufen:</p>
+<dl><dt>core/funcs.php</dt>
+<dd>enthält allgemeine Funktionen zum Handling
+    <ul>
+        <li>von globalen Variablen (z.B. GET, POST und SESSION-Variablen)</li>
+        <li>von Strings und Arrays</li>
+        <li>von Fehlern bzw. zum Ausgeben von Debug-Information</li>
+    </ul>
+</dd>
+
+<dt>core/include/inc*.php</dt>
+<dd>regelt den zeitlich korrekten Aufruf von Teil-Routinen</dd>
+
+</dl>

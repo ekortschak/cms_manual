@@ -1,0 +1,86 @@
+
+
+<h4>Tab-Eigenschaften</h4>
+
+<p>Im Allgemeinen werdend die Tab-Eigenschaften im Tab-Editor festgelegt. Weil es aber einfacher ist, den Startpunkt direkt im Menü auszuwählen, ist diese Funktion bei den Seiten-Eigenschaften untergebracht.</p>
+
+<p>Durch Setzen des Häkchens wird der ausgewählter Menüpunkt zum Startpunkt. Früher gesetzte Startpunkte werden überschrieben.</p>
+
+<h4>Seiten-Eigenschaften</h4>
+
+<table>
+	<tbody><tr class="rh">
+		<th>Eigenschaft</th>
+		<th>Funktion</th>
+	</tr>
+	<tr class="rw">
+		<td>UID</td>
+		<td>Eindeutiger Bezeichner, der den Menüpunkt eindeutig identifiziert. Die UID wird benötigt, um die jeweilige Seite aufzurufen. Wenn die ID nicht eindeutig ist, wird jeweils der letzte Menüpunkt mit der gleichen ID angesprungen.</td>
+	</tr>
+	<tr class="rw">
+		<td>Ordner-Inhalt</td>
+		<td>Legt fest, wie der Seiteninhalt anzuzeigen ist.</td>
+	</tr>
+	<tr class="rw">
+		<td>Nicht drucekn</td>
+		<td>Wird verwendet, wenn die aktuelle Seite nicht im Sammeldokument aufscheinen soll.</td>
+	</tr>
+	<tr class="rw">
+		<td>Titel</td>
+		<td>Titel im Menü</td>
+	</tr>
+	<tr class="rw">
+		<td>Überschrift</td>
+		<td>Titel über dem Seiteninhalt</td>
+	</tr>
+	<tr class="rw">
+		<td>Schlüsselwörter</td>
+		<td>Derzeit nicht in Verwendung</td>
+	</tr>
+	<tr class="rw">
+		<td>Seitenvorschub</td>
+		<td>Wird verwendet, wenn im Sammeldokument vor der aktuellen Seite ein Seitenvorschub gewünscht sein sollte.</td>
+	</tr>
+</tbody></table>
+
+<h4>Ordner-Inhalte</h4>
+<p>Es gibt vordefinierte Darstellungen für Menüpunkte, so daß für diese jeder Programmieraufwand wegfällt und durch die Definition von geeigneten Parametern ersetzt wird.</p>
+
+<table>
+	<tbody><tr class="rh">
+		<th>Typ</th>
+		<th>Beschreibung</th>
+	</tr>
+	<tr class="rw">
+		<td>default</td>
+		<td>Das CMS entscheidet selbständig, ob es sich bei dem Menüpunkt um einen einfache Menüpunkt, eine Seite oder eine Kombination aus beiden handelt. <br></td>
+	</tr>
+	<tr>
+		<td>file upload</td>
+		<td>Es wird ein Formular zum Hochladen von Dateien angeboten. Vorgaben zur max. Dateigröße und Dateitypen sind möglich.<br></td>
+	</tr>
+	<tr>
+		<td>file download</td>
+		<td>Alle Dateien im Verzeichnis werden zum Download angeboten, sofern die Dateitypen mit den spezifizierten Erweiterungen übereinstimmen.<br></td>
+	</tr>
+	<tr>
+		<td>file viewer</td>
+		<td>veraltet</td>
+	</tr>
+	<tr>
+		<td>mime type viewer</td>
+		<td>Alle Dateien werden entsprechend des Dateityps in einem dafür geeigneten Add-on angezeigt. So werden PDF-Dateien in einem PDF-Viewer angezeigt, Bilder und Multimedia-Inhalte in den dafür geeigneten Erweiterungen des Browsers.<br></td>
+	</tr>
+	<tr>
+		<td>ip camera</td>
+		<td>Es wird das Bild einer verbunden IP-Kamera angezeigt.<br></td>
+	</tr>
+	<tr>
+		<td>internal redirection</td>
+		<td>Wenn Ihnalte an mehreren Stellen im Menü angeboten werden sollen, empfiehlt es sich, diese nicht mehrmals zu definieren, sondern einfach auf jenes Verzeichnis zu verweisen, wo die Daten tatsächlich liegen.<br></td>
+	</tr>
+	<tr>
+		<td>collection</td>
+		<td>Alle Unterordner werden gesammelt und in eine Navigations-Tool integriert.<br></td>
+	</tr>
+</tbody></table>

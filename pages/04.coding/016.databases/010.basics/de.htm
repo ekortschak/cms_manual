@@ -1,0 +1,30 @@
+<p>Um flexibel für verschiedenste Datenbanken zu bleiben, werden die erforderlichen
+SQL-Befehle in Ini-Dateien abgelegt. Bei der Programmierung werden Platzhalter-Funktionen
+aufgerufen.</p>
+
+<h4>Speicherort</h4>
+<dl>
+    <dt>Datenbanken</dt>
+    <dd>Dateibasierte DBs befinden sich im Ordner <dfn>dbase</dfn></dd>
+
+    <dt>Ini-Dateien</dt>
+    <dd>beinhalten SQL-Code Templates und<br>
+        befinden sich in <dfn>dbase/xxx/*.ini</dfn> (xxx = DB-Typ, z.B. mysql)<br>
+        DB-Typen in Kleinbuchstaben
+    </dd>
+
+    <dt>Feldbeschreibungen</dt>
+    <dd>sind in <dfn>dbase/tables/xxx.ini</dfn> (xxx = Tabellenname)</dd>
+</dl>
+
+<h4>Anforderungen an das DB-Design</h4>
+<ul>
+    <li>Jede Tabelle enthält einen numerischen Schlüssel names "ID"</li>
+    <li>In Feld- & Tabellennamen keine Sonderzeichen</li>
+</ul>
+
+<h5>Unterstützte Datenbank-Formate</h5>
+<ul>
+    <li>MySQL</li>
+    <li>sqLite (in Entwicklung)</li>
+</ul>

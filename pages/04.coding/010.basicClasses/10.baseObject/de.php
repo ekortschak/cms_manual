@@ -1,0 +1,16 @@
+<p>Alle Objekte sind von der Basisklasse "objects" abgeleitet und
+verfügen daher über folgende Methoden:</p>
+
+<?php
+
+// ***********************************************************
+HTM::tag("Basic Methods");
+// ***********************************************************
+echo "<dl>";
+HTM::def("set(\$key, \$val)", "speichert einen Variablen-Inhalt");
+HTM::def("get(\$key, \$default)", "findet einen Variablen-Inhalt oder gibt den Standardwert zurück");
+HTM::def("getValues(\$key)", "gibt alle Werte zurück, die mit \$key beginnen");
+echo "</dl>";
+
+HTM::code("./sample.php");
+?>

@@ -1,0 +1,18 @@
+<?php
+
+$dir = FSO::mySep(__DIR__);
+$ico = "core/icons/buttons";
+
+// ***********************************************************
+incCls("menus/buttons.php");
+// ***********************************************************
+$nav = new buttons("styles", "D", $dir);
+$nav->add("A", "default");
+$nav->add("T", "tables");
+$nav->add("L", "listings");
+$nav->show();
+
+$nav->showContent();
+
+?>
+

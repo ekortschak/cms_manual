@@ -1,0 +1,55 @@
+<h4>Spachabhängige Inhalte</h4>
+
+<p>Gesucht wird zunächst nach sprachspezifischen Dateien, dann nach sprachunabhängigen Dateien
+und schließlich nach Dateien in der Standardsprache.</p>
+
+<h5>Suchreihenfolge</h5>
+<p>Annahmen: CUR_LANG = de, GEN_LANG = en</p>
+<pre>
+• de.php  => de.htm  => de.html (sprachspezifische Dateien)
+• xx.php  => xx.htm  => xx.html (sprachunabhängige Dateien)
+• en.php  => en.htm  => en.html (Dateien in der Standardsprache)
+</pre>
+
+<h4>Falls keine Datei gefunden wird</h4>
+<p>wird ein Hinweis ausgegeben.<br>
+Die Vorlage dafür befindet sich in <dfn>design/templates/msgs/sitemap</dfn>.</p>
+
+<p>Im einfachsten Fall, bittet diese Datei darum, einen anderen Menüpunkt auszuwählen. Sie
+kann aber beliebig erweitert werden, um im Extremfall eine komplette Sitemap mit allen
+relevanten Sprungzielen abzubilden.</p>
+
+
+<h4>Head und Tail-Dateien</h4>
+
+<p>"head" und "tail"-Dateien werden als Einleitung oder Nachspann zum eigentlichen
+Inhalt verwendet, z.B. für sprachunabhängige Information.</p>
+
+<h5>Suchreihenfolge</h5>
+<pre>
+• head.php  => head.htm  => head.html
+</pre>
+
+<h4>Banner und Trailer</h4>
+<p>"banner" und "trailer" werden verwendet, um über/unter alle Dateien einer Registerkarte
+einen gemeinsamen Text zu stellen. Banner dienen darüber hinaus auch dazu, um allenfalls
+Berechtigungen zu prüfen. Wenn die weitere Ausführung unterbunden werden soll, muß in der
+"banner"-Datei die Funktion <dfn>APP::block()</dfn> aufgerufen werden.</p>
+
+<p>Diese Dateien müssen zwischen <dfn>pages/</dfn> bzw. <dfn>TAB_PATH</dfn> und der aufzurufenden
+Datei stehen. Finden sich mehrere Dateien, werden sie der Hierarchie entsprechend
+angezeigt:</p>
+<ul>
+	<li>Banner: top -> down</li>
+	<li>Trailer: bottom -> up</li>
+</ul>
+
+
+<h4>Hilfe-Dateien</h4>
+
+<h5>Suchreihenfolge</h5>
+<pre>
+• de.help.php  => de.head.htm  => de.head.html
+• xx.help.php  => xx.head.htm  => xx.head.html
+• de.help.php  => de.head.htm  => de.head.html
+</pre>
