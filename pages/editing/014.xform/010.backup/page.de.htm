@@ -1,0 +1,14 @@
+<p>Es gibt 2 Methoden der Datensicherung:</p>
+
+<dl>
+<dt>Spiegelung bzw. Synchronisation</dt>
+<dd>Die komplette Datei-Struktur wird in ein anderes Verzeichnis übertragen. Bestehende Dateien werden überschrieben, neue Dateien werden erstellt, gelöschte Dateien werden gelöscht.<br>Es gibt <b>nur 1 Kopie</b>.<br></dd><dt>Sicherung</dt><dd>Die komplette Datei-Struktur wird in ein Sicherungsverzeichnis übertragen. Dabei wird <b>pro Sicherungstag 1 Kopie</b> geführt, d.h. mehrere Backups am selben Tag führen am Ende nur zu einer einzigen Sicherung.<br></dd>
+</dl>
+
+<p>Neben der Art der Sicherung kann auch das Sicherungsmedium aus einer Liste ausgewählt werden. Diese sind in <dfn>config/backup.ini</dfn> definiert.</p>
+
+<h4>Wann ist wie zu sichern?</h4>
+<p>Es empfiehtl sich, die Synchronisation vor jeder Datenbearbeitung durchzuführen. Wann immer ein Zustand erreicht ist, der gefällig ist und für längere Zeit bleiben wird, sollte eine Sicherung gemacht werden.</p>
+
+<h4>Wartung der Sicherungen</h4>
+<p>Wenn die Liste der Sicherungen zu lang wird, können die ältesten im Explorer gelöscht werden. Das Backup-Verzeichnis befindet sich im Root-Verzeichnis des lokalen Webservers, die Sicherungen selbst befinden sich in einem Unterverzeichnis der Form <dfn>backup/xxx/yyyy.mm.dd</dfn>, wobei xxx für den Projektnamen steht und yyyy.mm.dd für das Datum der Sicherung.</p>

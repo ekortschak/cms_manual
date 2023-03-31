@@ -1,0 +1,41 @@
+
+<p>Für die Ausgabe von Fehler-Meldungen steht die statische Klasse <dfn>ERR</dfn> zur Verfügung. Dabei ist zwischen der Meldung selbst und allfälliger variabler Information zu unterscheiden.</p>
+<p>Im folgenden Beispiel wird nach der Meldung "tpl.unknown" im Wöterbuch gesucht und bei erfolgreicher Suche sprachabhängig ersetzt. Der 2. Parameter ist optional. Wenn er übergeben wird, wird er an die Meldung angehängt.</p>
+
+<code>ERR::msg("tpl.unknown", "beispiel");</code>
+würde ergeben:
+<?php ERR::msg("tpl.unknown", "beispiel"); ?>
+
+<h4>Wichtige Methoden</h4>
+
+<table>
+	<tbody>
+<tr class="rh">
+		<th>Funktion</th>
+		<th>Beschreibung</th>
+	</tr>
+	<tr class="rw">
+		<td>msg()</td>
+		<td>fügt dem Meldungsstapel eine Fehlermeldung hinzu<br></td>
+	</tr>
+	<tr class="rw">
+		<td>box()</td>
+		<td>gibt die Fehlermeldung in einer dezenten Box aus</td>
+	</tr>
+	<tr class="rw">
+		<td>sql()</td>
+		<td>fügt dem Meldungsstapel eine Fehlermeldung hinzu. Dabei wird ein übergebener SQL-String optisch aufbereitet.</td>
+	</tr>
+	<tr class="rw">
+		<td>raise()</td>
+		<td>löst einen Fehler aus</td>
+	</tr>
+	<tr class="rw">
+		<td>trace()</td>
+		<td>gibt den Aufrufstapel aus (i.a. letzte 3 Funktionen)</td>
+	</tr>
+	<tr class="rw">
+		<td>assist()</td>
+		<td>gibt eine umfangreichere Fehlermeldung aus, die i.A. auch Hinweise zur Problemlösung beinhalten sollte. Diese sind in&nbsp; <dfn>design/errors/*.tpl</dfn> gespeichert ist</td>
+	</tr>
+</tbody></table>

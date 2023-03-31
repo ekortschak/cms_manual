@@ -1,17 +1,21 @@
 <?php
 
-ob_start();
-
-include_once("config/basics.php");
-include_once("core/inc.min.php");
-include_once("core/classes/server/fileServer.php");
-
-echo ob_get_clean();
+include_once "config/fallback.php";
+include_once "core/inc.min.php";
 
 // ***********************************************************
-$srv = new srvX();
+// determine method
+// ***********************************************************
+$fnc = "xfer"; if ($_FILES) 
+$fnc = "curl";
+
+// ***********************************************************
+incCls("server/$fnc.php");
+
+$srv = new $fnc();
 $srv->act();
 
 ?>
 
-FX-Service
+<hr>
+FX DONE

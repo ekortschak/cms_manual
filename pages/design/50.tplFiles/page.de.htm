@@ -1,0 +1,61 @@
+
+<p>(Fast) alles, was auf den Bildschirm kommt, basiert auf Vorlagen,
+das sind Abschnitte in HTML-Code, die das grundlegende Aussehen der
+darzustellenden Objekte festlegen.</p>
+
+<p>Erst zur Laufzeit wird das entgültige Aussehen durch Setzen von Variablen
+bzw. Einsetzen von Information festgelegt.</p>
+
+<h4>Speicherort</h4>
+<p>Vorlagen können grundsätzlich in jedem Ordner abgelegt werden.<br>
+Standardmäßig liegen sie in einem Unterordner von <dfn>templates</dfn>.<br>
+Sie haben die Erweiterung "<dfn>.tpl</dfn>".</p>
+
+<h4>Aufbau</h4>
+<p>Vorlagen sind in Sektionen unterteilt. Diese sind durch eckige Klammern gekennzeichnet.</p>
+<ul>
+	<li>Jede Vorlage sollte eine Sektion <dfn>[main]</dfn> beinhalten.</li>
+	<li>Jede Sektion kann andere Sektionen mittels
+		<green></green> <dfn>&lt;!SEC:xy!&gt;</dfn> "aufrufen".</li>
+</ul>
+
+
+<h4>Kommentare</h4>
+<msg>Für <b>Kommentare</b> wird "#" verwendet.<br>
+Soll "#" nicht als Kommentarzeichen interpretiert werden, <br>ist "\#" zu verwenden.</msg>
+
+
+<h4>Vererbung</h4>
+<p>Jede Vorlage kann durch Einträge in der Sektion <dfn>[include]</dfn> auf bereits bestehende Vorlagen aufbauen.
+Dabei gilt:</p>
+<ul>
+	<li>Alle Sektionen der Eltern werden auf die Kinder <b>vererbt</b> (kumulativ).</li>
+	<li>Sektionen gleichen Namens werden von den Kindern <b>überschrieben</b>.</li>
+	<li><b>Konstante</b> werden gleich nach dem Einlesen durch ihre Werte ersetzt!</li>
+	<li><b>Variablen</b> und <b>Wörterbuch-Einträge</b> werden durch die Eltern <b>ergänzt</b>.</li>
+</ul>
+
+<h4>Variable</h4>
+
+<p><b>Variable</b> können in der Sektion <dfn>[vars]</dfn> definiert werden. <br>
+Der Zugriff erfolgt mittels <dfn>&lt;!VAR:xy!&gt;</dfn>.</p>
+
+
+<h4>Sparchunterstützung</h4>
+
+<p><b>Sprachabhängige Info</b> kann in den "<dfn>[dic.??]</dfn>"-Sektionen definiert werden. Dafür ist für jede
+Sprache eine Sektion anzulegen, z.B. <dfn>[dic.en]</dfn>. Auf diese Info kann mittels <dfn>&lt;!DIC:xy!&gt;</dfn>
+verwiesen werden. Den sprachspezifieschen Einträgen kann eine alltemeine Sektion <dfn>[dic]</dfn> folgen.
+Sie kommt zur Anwendung, wenn keine spezifischen Einträge vorliegen.</p>
+
+<ul>
+<li>Der Aufruf von Sektionen erfolgt sprachunabhängig, d.h. statt <dfn>&lt;!SEC:xy.de!&gt;</dfn> wird nur <dfn>&lt;!SEC:xy!</dfn>&gt; geschrieben.</li>
+<li>Wichtig: allgemeine Sprachdefinitionen müssen speziellen vorangehen!</li>
+<li>Sprachspezifische Angaben können auch in den Dateien in <dfn>design/dictionary</dfn> gemacht werden.</li>
+</ul>
+
+<h4>Beispiel</h4>
+
+<?php
+HTW::snip("./sample.tpl", "Demo-Vorlage");
+?>

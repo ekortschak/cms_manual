@@ -1,0 +1,13 @@
+<?php
+
+incCls("menus/buttons.php");
+
+// ***********************************************************
+$nav = new buttons("styles", "A", __DIR__);
+$nav->add("A", "default");
+$nav->add("T", "tables");
+$nav->add("L", "listings");
+$nav->show();
+
+?>
+

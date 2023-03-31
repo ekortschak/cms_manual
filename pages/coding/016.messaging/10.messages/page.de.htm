@@ -1,0 +1,48 @@
+
+<p>Für die Ausgabe von System-Meldungen steht die statische Klasse <dfn>MSG</dfn> zur Verfügung. Dabei ist zwischen der Meldung selbst und allfälliger variabler Information zu unterscheiden.</p>
+<p>Im folgenden Beispiel wird nach der Meldung "tpl.unknown" im Wöterbuch gesucht und bei erfolgreicher Suche sprachabhängig ersetzt. Der 2. Parameter ist optional. Wenn er übergeben wird, wird er an die Meldung angehängt.</p>
+
+<code>MSG::add("tpl.unknown", "beispiel");</code>
+<msg>Vorlage unbekannt: beispiel</msg>
+
+<h4>Wichtige Methoden</h4>
+
+<table>
+	<tbody>
+<tr class="rh">
+		<th>Funktion</th>
+		<th>Beschreibung</th>
+	</tr>
+	<tr class="rw">
+		<td>add()</td>
+		<td>fügt dem Meldungsstapel eine Meldung hinzu<br></td>
+	</tr>
+	<tr class="rw">
+		<td>err()</td>
+		<td>fügt dem Meldungsstapel eine Fehlermeldung hinzu<br>stattdessen wird besser <dfn>ERR::msg()</dfn> verwendet<br></td>
+	</tr>
+	<tr class="rw">
+		<td>raw()</td>
+		<td>wie MSG::add() - der Text wird aber nicht übersetzt<br></td>
+	</tr>
+	<tr class="rw">
+		<td>check()</td>
+		<td>fügt die Meldung hinzu, wenn eine ebenfalls übergebene Bedingung erfüllt ist</td>
+	</tr>
+	<tr class="rw">
+		<td>show()</td>
+		<td>gibt die gestapelten Meldungen aus und leert den Stapel</td>
+	</tr>
+	<tr class="rw">
+		<td>now()</td>
+		<td>gibt eine Meldung unmittelbar aus und leert den Stapel<br></td>
+	</tr>
+	<tr class="rw">
+		<td>long()</td>
+		<td>gibt eine umfangreichere Meldung aus, die in <dfn>LOC_TPL/msgs/tales.tpl</dfn> gespeichert ist</td>
+	</tr>
+	<tr class="rw">
+		<td>reset()</td>
+		<td>leert den Meldungsstapel</td>
+	</tr>
+</tbody></table>
