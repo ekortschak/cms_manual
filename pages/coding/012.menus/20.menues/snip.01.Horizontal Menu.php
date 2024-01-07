@@ -1,6 +1,6 @@
 <?php
 
-$arr = PFS::getMenu();
+$arr = PFS::items();
 
 incCls("menus/menu.php");
 

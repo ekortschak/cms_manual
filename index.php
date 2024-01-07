@@ -1,11 +1,8 @@
 <?php
 
-#$_GET["dmode"] = "offline";
+# define("OFFLINE", true);
 
 include_once "config/fallback.php";
-include_once "core/inc.min.php";
-include_once "core/inc.more.php";
-
-incFnc("pagemaker.php");
+include_once "core/main.php";
 
 ?>
